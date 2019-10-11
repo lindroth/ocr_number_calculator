@@ -14,9 +14,9 @@ def calculate_checksum(partial_ocr):
 	checksum = 0
 	#The checksum is calculated in reverse, right to left.
 	for idx, x in enumerate(reversed(partial_ocr)):
-		#each x is multiplied by a weigth that is 1 or 2 starting on 2
-		weigth = (idx + 1)%2 + 1
-		result = int(x) * weigth
+		#each x is multiplied by a weight that is 1 or 2 starting on 2
+		weight = (idx + 1)%2 + 1
+		result = int(x) * weight
 		if result > 9:
 			result = result - 9
 		checksum = checksum + result
